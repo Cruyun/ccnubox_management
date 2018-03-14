@@ -13,7 +13,6 @@
 		        	<input class="input-xlarge focused" id="feedback" type="text" v-model="feedback" required>
 		      	</div>
 		    </div>
-	    </div>
 	    <div class="form-actions">
 	      <button class="btn btn-success" @click="register">Add New <i class="icon-plus icon-white"></i></button>
 	      <button type="reset" class="btn">Cancel</button>

@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
@@ -71,12 +72,22 @@
                     <li class="active">
                         <a v-link="{ path: '/product/0'}"><i class="icon-chevron-right"></i>产品展示</a>
                     </li>
+                    <li class="active">
+                        <a>Users</a>
+                    </li>
+                    <li>
+                        <a v-link="{ path: '/users'}"><i class="icon-chevron-right"></i>获取 Token</a>
+                    </li>
+                     <li>
+                        <a v-link="{ path: '/users/info'}"><i class="icon-chevron-right"></i>报错信息</a>
+                    </li>
                 </ul>
             </div>
 	        <div class="span9" id="content">
 				<router-view :url="url"></router-view>
 			</div>
 	    </div>
+    </div>
     </div>
 </template>
 <script>

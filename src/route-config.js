@@ -52,6 +52,9 @@ import iosManage from './content/components/ios/iosconfig/manageconfig.vue'
 
 import Login from './login.vue'
 
+import Users from './content/components/users/Users.vue'
+import UsersInfo from './content/components/users/UsersInfo.vue'
+import UsersToken from './content/components/users/UsersToken.vue'
 
 export default {
 	'/':{
@@ -198,8 +201,19 @@ export default {
 							component:iosManage
 						}
 					}
+			},
+			'users':{
+				component:Users,
+				subRoutes: {
+					'/': {
+						component: UsersToken
+					},
+					'/info': {
+						component: UsersInfo
+					}
+				}
 			}
-		}
+		},
 	},
 	'login':{
 		component: Login

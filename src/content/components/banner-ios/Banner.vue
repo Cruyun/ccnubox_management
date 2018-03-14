@@ -1,5 +1,6 @@
 <template>
 <div>
+<div>
 	<h1>Banner for ios</h1>
 </div>
 <div>
@@ -15,6 +16,7 @@
 		</li>
 	</ul>
 	<router-view :url="url"></router-view>
+</div>
 </div>
 </template>
 

@@ -1,48 +1,51 @@
 <template>
-<table class="table table-bordered" style="table-layout:fixed">
-	<thead>
-		<tr>
-			<th width="20%">Calendar</th>
-			<th width="80%"></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>七牛外链</td>
-			<td><a href="{{ img }}">{{ img }}</a></td>
-		</tr>
-		<tr>
-			<td>图片大小</td>
-			<td>{{ size }}</td>
-		</tr>
-		<tr>
-			<td>更新时间</td>
-			<td>{{ update }}</td>
-		</tr>
-	</tbody>
-</table>
+	<div>
+		<table class="table table-bordered" style="table-layout:fixed">
+			<thead>
+				<tr>
+					<th width="20%">Calendar</th>
+					<th width="80%"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>七牛外链</td>
+					<td><a href="{{ img }}">{{ img }}</a></td>
+				</tr>
+				<tr>
+					<td>图片大小</td>
+					<td>{{ size }}</td>
+				</tr>
+				<tr>
+					<td>更新时间</td>
+					<td>{{ update }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </template>
+
 <script>
 	var request = require('superagent');
 	export default {
-		data(){
+		data() {
 			return {
-			    img: '',
-			    size: '',
-			    update: ''
+				img: '',
+				size: '',
+				update: ''
 			}
 		},
 		props: {
-	    	url: {
-	          	type: String
-	      	}
-  		},
+			url: {
+				type: String
+			}
+		},
 		route: {
-			activate: function () {
+			activate: function() {
 				var self = this
 				request
 					.get(self.url + '/calendar/')
-					.end(function(err,res){
+					.end(function(err, res) {
 						console.log(res.body)
 						if (err) throw err
 						self.img = res.body.img
@@ -52,5 +55,4 @@
 			}
 		}
 	}
-		
 </script>

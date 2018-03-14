@@ -7,7 +7,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr v-for="array in arrays">
+			<tr v-for="array in arrays" :key="arrays.indexOf(array)">
 				<td>{{ array.user }}</td>
 				<td>{{ array.msg }}</td>
 			</tr>
