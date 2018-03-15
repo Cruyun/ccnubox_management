@@ -10,7 +10,7 @@
       <div  class="card border-success mb-3" style="max-width: 18rem;">
         <div class="card-body text-success">
           <h5 class="card-title">Token</h5>
-          <p class="card-text" v-if="isToken">{{token}}</p>
+          <p class="card-text" v-if="this.isToken">{{token}}</p>
         </div>
       </div>
     </div>
